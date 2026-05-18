@@ -1,0 +1,32 @@
+# Local dependency folders
+.codex_pydeps/
+node_modules/
+__pycache__/
+scripts/__pycache__/
+
+# Raw and prepared datasets are too large for GitHub.
+Credit Card Fraud Detection/*.csv
+Credit Card Fraud Detection_2023/*.csv
+outputs/stage1/*_prepared.csv
+
+# Runtime/debug artifacts
+*.log
+outputs/stage2/_*.txt
+outputs/stage2/_*.log
+outputs/stage2/knn_test_log.txt
+
+# Presentation build runtime/cache artifacts. The final deck is committed under docs/.
+outputs/manual-*/presentations/*/node_modules/
+outputs/manual-*/presentations/*/layouts/
+outputs/manual-*/presentations/*/previews/
+outputs/manual-*/presentations/*/dist/
+outputs/manual-*/presentations/*/package.json
+
+# Duplicate packaged artifacts
+latex_bundle.zip
+template*.docx
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+.ipynb_checkpoints/

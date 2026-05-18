@@ -1,0 +1,35 @@
+{
+  "main": {
+    "source": "F:\\project\\Credit Card\\Credit Card Fraud Detection\\creditcard.csv",
+    "rows_before_dedup": 284807,
+    "rows_after_dedup": 283726,
+    "removed_duplicates": 1081,
+    "duplicate_rows_before_dedup": 1081,
+    "class_counts_after_dedup": {
+      "0": 283253,
+      "1": 473
+    },
+    "amount_zscore": {
+      "mean": 88.47268731099723,
+      "std": 250.39899584557298
+    }
+  },
+  "ext2023": {
+    "source": "F:\\project\\Credit Card\\Credit Card Fraud Detection_2023\\creditcard_2023.csv",
+    "rows_before_drop_columns": 568630,
+    "rows_after_drop_columns": 568630,
+    "duplicate_rows_before_drop_columns": 0,
+    "duplicate_rows_after_drop_columns": 1,
+    "class_counts": {
+      "0": 284315,
+      "1": 284315
+    },
+    "dropped_columns": [
+      "id"
+    ],
+    "amount_zscore_reference": {
+      "mean": 88.47268731099723,
+      "std": 250.39899584557298
+    }
+  }
+}

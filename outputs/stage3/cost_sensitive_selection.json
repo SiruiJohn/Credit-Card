@@ -1,0 +1,38 @@
+[
+  {
+    "cost_ratio_fp_fn": "1:5",
+    "selected_threshold_from_main": 0.97,
+    "main_precision": 0.70018281535649,
+    "main_recall": 0.8097251585623678,
+    "main_f1": 0.7509803921568627,
+    "main_cost": 614,
+    "ext_precision": 0.6121384499073261,
+    "ext_recall": 0.7062624202029439,
+    "ext_f1": 0.6558405609891124,
+    "ext_cost": 544801
+  },
+  {
+    "cost_ratio_fp_fn": "1:10",
+    "selected_threshold_from_main": 0.97,
+    "main_precision": 0.70018281535649,
+    "main_recall": 0.8097251585623678,
+    "main_f1": 0.7509803921568627,
+    "main_cost": 1064,
+    "ext_precision": 0.6121384499073261,
+    "ext_recall": 0.7062624202029439,
+    "ext_f1": 0.6558405609891124,
+    "ext_cost": 962371
+  },
+  {
+    "cost_ratio_fp_fn": "1:20",
+    "selected_threshold_from_main": 0.9,
+    "main_precision": 0.5277044854881267,
+    "main_recall": 0.8456659619450317,
+    "main_f1": 0.6498781478472786,
+    "main_cost": 1818,
+    "ext_precision": 0.5948909818087988,
+    "ext_recall": 0.8108963649473295,
+    "ext_f1": 0.6862985867696635,
+    "ext_cost": 1232300
+  }
+]

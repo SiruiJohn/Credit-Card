@@ -1,0 +1,63 @@
+{
+  "main_rows": 283726,
+  "main_class_counts": {
+    "0": 283253,
+    "1": 473
+  },
+  "external_rows": 568630,
+  "external_class_counts": {
+    "0": 284315,
+    "1": 284315
+  },
+  "external_duplicate_rows": 1,
+  "top_external_correlations_with_class": [
+    {
+      "feature": "V14",
+      "corr_with_class": -0.8056692033482222
+    },
+    {
+      "feature": "V12",
+      "corr_with_class": -0.7685793328121714
+    },
+    {
+      "feature": "V4",
+      "corr_with_class": 0.7359808565710273
+    },
+    {
+      "feature": "V11",
+      "corr_with_class": 0.7242781571398379
+    },
+    {
+      "feature": "V3",
+      "corr_with_class": -0.682095464746486
+    },
+    {
+      "feature": "V10",
+      "corr_with_class": -0.6736650416630412
+    },
+    {
+      "feature": "V9",
+      "corr_with_class": -0.5855216713180037
+    },
+    {
+      "feature": "V16",
+      "corr_with_class": -0.5735112908795752
+    },
+    {
+      "feature": "V1",
+      "corr_with_class": -0.5057610150941871
+    },
+    {
+      "feature": "V2",
+      "corr_with_class": 0.4918780282578429
+    },
+    {
+      "feature": "V7",
+      "corr_with_class": -0.49123416156804167
+    },
+    {
+      "feature": "V17",
+      "corr_with_class": -0.47637650032080747
+    }
+  ]
+}
