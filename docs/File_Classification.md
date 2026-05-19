@@ -7,8 +7,6 @@
 - `Credit Card Fraud Detection_2023/creditcard_2023.csv`
   - 外部 2023 验证集，568,630 行，类别分布 0:284,315 / 1:284,315。
 
-说明：上述原始 CSV 文件体积较大，不纳入 GitHub 提交；复现时需要自行放入对应路径。
-
 ## 2. 中间处理数据
 
 - `outputs/stage1/main_prepared.csv`
@@ -17,8 +15,6 @@
   - 外部数据去除 `id` 后版本，568,630 行，新增 `Amount_z`。
 - `outputs/stage1/prepare_metadata.json`
   - 数据准备元信息、行数校验和类别分布校验。
-
-说明：prepared CSV 可由 `scripts/prepare_stage1_data.py` 重新生成，因此也不纳入 GitHub 提交。
 
 ## 3. 核心代码脚本
 
@@ -119,8 +115,11 @@
 ## 6. PPT 构建源文件
 
 - `outputs/manual-20260515-creditcard-defense/presentations/credit-card-defense/slides/`
+- `outputs/manual-20260515-creditcard-defense/presentations/credit-card-defense/previews/`
+- `outputs/manual-20260515-creditcard-defense/presentations/credit-card-defense/dist/credit-card-fraud-detection-defense.pptx`
+- `outputs/manual-20260515-creditcard-defense/presentations/credit-card-defense/dist/contact-sheet.png`
 
-用途：保留可复建的 PPT 源文件，便于后续修改答辩材料。预览图、构建运行时和临时导出文件不纳入 GitHub；最终 PPT 已放在 `docs/Credit_Card_Fraud_Detection_Defense.pptx`。
+用途：保留可复建的 PPT 源文件、预览图和最终导出文件，便于后续修改答辩材料。
 
 ## 7. 外部 notebook 参考
 

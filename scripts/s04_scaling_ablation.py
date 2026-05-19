@@ -11,7 +11,7 @@ import numpy as np
 import pandas as pd
 
 from models_from_scratch import KNNScratch, LogisticRegressionScratch
-from train_phase2 import binary_metrics, choose_threshold, pr_auc_score_manual, roc_auc_score_manual, stratified_subsample
+from utils import binary_metrics, choose_threshold, pr_auc_score_manual, roc_auc_score_manual, stratified_subsample
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -136,4 +136,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-

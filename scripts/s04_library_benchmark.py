@@ -17,7 +17,7 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import StandardScaler
 
-from train_phase2 import binary_metrics, choose_threshold, pr_auc_score_manual, roc_auc_score_manual
+from utils import binary_metrics, choose_threshold, pr_auc_score_manual, roc_auc_score_manual
 
 
 ROOT = Path(__file__).resolve().parents[1]

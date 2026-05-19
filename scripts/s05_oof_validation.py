@@ -12,7 +12,7 @@ import numpy as np
 import pandas as pd
 
 from models_from_scratch import LogisticRegressionScratch
-from train_phase2 import binary_metrics, pr_auc_score_manual, roc_auc_score_manual, stratified_kfold_indices
+from utils import binary_metrics, pr_auc_score_manual, roc_auc_score_manual, stratified_kfold_indices
 
 
 ROOT = Path(__file__).resolve().parents[1]
