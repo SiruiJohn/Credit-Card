@@ -24,13 +24,15 @@ Credit Card/
 │   ├── s04_external_eda.py         ← Stage 4: External dataset EDA & visualization
 │   ├── s04_scaling_ablation.py     ← Stage 4: Scaling method ablation (standard/minmax/robust)
 │   ├── s04_library_benchmark.py    ← Stage 4: Mature library reference benchmarks
-│   └── s05_oof_validation.py       ← Stage 5: OOF threshold review (MinMax verification)
+│   ├── s05_oof_validation.py       ← Stage 5: OOF threshold review
+│   └── s06_cascade_architecture.py ← Stage 6: Two-stage cascade + advanced metrics
 ├── outputs/
 │   ├── stage1/                     ← Prepared data + EDA outputs
 │   ├── stage2/                     ← Training results + threshold scans + ablation + kNN tuning
 │   ├── stage3/                     ← Cost analysis + temporal robustness + error cases
 │   ├── stage4/                     ← External EDA + scaling ablation + library benchmarks
-│   └── stage5/                     ← OOF threshold validation
+│   ├── stage5/                     ← OOF threshold validation
+│   └── stage6/                     ← Cascade architecture + advanced metrics
 ├── docs/
 │   ├── planning/                   ← Project planning documents
 │   ├── process/                    ← Stage-level documentation
@@ -49,6 +51,7 @@ Credit Card/
 - Stage 3 cost-sensitive thresholding, temporal robustness, and error-case analysis have been refreshed.
 - Notebook-inspired Stage 4 extensions have been added: external EDA figures, scaling ablation, and mature library reference benchmarks.
 - Stage 5 OOF-threshold review has been added to verify MinMax scaling under a stricter threshold-selection protocol.
+- Stage 6 two-stage cascade architecture and advanced metrics (F-β, Lift, Cumulative Gain, Amount-Weighted, ECE, PSI) have been added.
 - Formal LaTeX figures in `latex_bundle/figures/` have been synchronized with the refreshed outputs.
 - A 15-slide defense deck has been added at `docs/Credit_Card_Fraud_Detection_Defense.pptx`.
 
@@ -76,11 +79,11 @@ Generated prepared data:
 The simplest way to reproduce the entire project is via `main.py`:
 
 ```powershell
-python main.py                 # Run all 5 stages
+python main.py                 # Run all 6 stages
 python main.py --quick         # Quick mode (2-fold CV)
 python main.py --stage 1       # Run Stage 1 only
 python main.py --stage 2 --quick  # Stage 2 in quick mode
-python main.py --skip-stage 4 --skip-stage 5  # Skip Stage 4 and 5
+python main.py --skip-stage 4 --skip-stage 5 --skip-stage 6
 ```
 
 ## Manual Reproduce (Stage by Stage)
@@ -117,6 +120,9 @@ $env:PYTHONPATH = '.\.codex_pydeps'
 
 # Stage 5 — OOF Validation
 & $py scripts\s05_oof_validation.py
+
+# Stage 6 — Two-Stage Cascade & Advanced Metrics
+& $py scripts\s06_cascade_architecture.py
 ```
 
 ## Pipeline Stages
@@ -128,12 +134,19 @@ $env:PYTHONPATH = '.\.codex_pydeps'
 | **3** | `s03_cost_threshold`, `s03_temporal_robustness`, `s03_error_analysis` | Cost-sensitive threshold optimization (FP:FN ratios), temporal robustness via expanding-window evaluation, and error case profiling |
 | **4** | `s04_external_eda`, `s04_scaling_ablation`, `s04_library_benchmark` | External dataset visualizations, scaling method comparison (standard/minmax/robust), and mature sklearn library benchmarks |
 | **5** | `s05_oof_validation` | Strict OOF (out-of-fold) threshold selection protocol to verify MinMax scaling promotion |
+| **6** | `s06_cascade_architecture` | Two-stage cascade (MinMax LR auto-block → Standard LR recall net), F-β scores, Lift curves, Cumulative Gain, Amount-Weighted metrics, ECE calibration, PSI stability |
 
 ## Shared Modules
 
 | Module | Contents |
 |--------|----------|
 | `scripts/utils.py` | `binary_metrics`, `choose_threshold`, `roc_auc_score_manual`, `pr_auc_score_manual`, `stratified_kfold_indices`, `stratified_subsample`, `standardize_by_train` |
+| | `f_beta_score` — customizable Precision/Recall weight for fraud-detection scenarios |
+| | `compute_lift_curve` — Lift analysis per score bucket |
+| | `compute_cumulative_gain` — Alert budget optimization curve |
+| | `compute_amount_weighted_metrics` — Dollar-weighted Precision/Recall/F1 |
+| | `compute_ece` — Expected Calibration Error (reliability of predicted probabilities) |
+| | `compute_psi` — Population Stability Index (main → external score drift)
 | `scripts/models_from_scratch.py` | `LogisticRegressionScratch`, `GaussianNBScratch`, `KNNScratch` |
 
 ## Main Results

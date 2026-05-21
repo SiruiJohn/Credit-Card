@@ -20,34 +20,39 @@
 
 ### Stage 1: EDA 与数据准备
 
-- `scripts/eda_stage1.py`
-- `scripts/prepare_stage1_data.py`
+- `scripts/s01_prepare_data.py`
+- `scripts/s01_eda.py`
 
 ### Stage 2: 从零实现模型、基线、阈值与消融
 
 - `scripts/models_from_scratch.py`
-- `scripts/train_phase2.py`
-- `scripts/plot_phase2_results.py`
-- `scripts/phase2_advanced_analysis.py`
-- `scripts/lr_final_analysis.py`
-- `scripts/tune_knn.py`
-- `scripts/tune_knn_advanced.py`
+- `scripts/s02_train_baseline.py`
+- `scripts/s02_plot_baseline.py`
+- `scripts/s02_ablation.py`
+- `scripts/s02_lr_analysis.py`
+- `scripts/s02_tune_knn.py`
+- `scripts/s02_tune_knn_advanced.py`
 
 ### Stage 3: 增强分析
 
-- `scripts/cost_sensitive_threshold.py`
-- `scripts/temporal_robustness.py`
-- `scripts/error_case_analysis.py`
+- `scripts/s03_cost_threshold.py`
+- `scripts/s03_temporal_robustness.py`
+- `scripts/s03_error_analysis.py`
 
 ### Stage 4: Notebook 启发扩展
 
-- `scripts/external_eda_notebook_inspired.py`
-- `scripts/scaling_ablation.py`
-- `scripts/library_benchmark.py`
+- `scripts/s04_external_eda.py`
+- `scripts/s04_scaling_ablation.py`
+- `scripts/s04_library_benchmark.py`
 
 ### Stage 5: OOF 阈值与 MinMax 主线复核
 
-- `scripts/minmax_oof_threshold_analysis.py`
+- `scripts/s05_oof_validation.py`
+
+### Stage 6: 两阶段 Cascade 与高级业务指标
+
+- `scripts/s06_cascade_architecture.py`
+- `scripts/utils.py`
 
 ## 4. 结果产物
 
@@ -96,6 +101,16 @@
 - `outputs/stage5/oof_cost_sensitive_selection.csv`
 - `outputs/stage5/*.png`
 
+### Stage 6
+
+- `outputs/stage6/cascade_summary.md`
+- `outputs/stage6/cascade_comparison.json`
+- `outputs/stage6/lift_curve.json`
+- `outputs/stage6/cumulative_gain.json`
+- `outputs/stage6/ece_main.json`
+- `outputs/stage6/ece_ext.json`
+- `outputs/stage6/*.png`
+
 ## 5. 文档、报告与答辩材料
 
 - `README.md`
@@ -115,11 +130,8 @@
 ## 6. PPT 构建源文件
 
 - `outputs/manual-20260515-creditcard-defense/presentations/credit-card-defense/slides/`
-- `outputs/manual-20260515-creditcard-defense/presentations/credit-card-defense/previews/`
-- `outputs/manual-20260515-creditcard-defense/presentations/credit-card-defense/dist/credit-card-fraud-detection-defense.pptx`
-- `outputs/manual-20260515-creditcard-defense/presentations/credit-card-defense/dist/contact-sheet.png`
 
-用途：保留可复建的 PPT 源文件、预览图和最终导出文件，便于后续修改答辩材料。
+用途：保留可复建的 PPT 源文件，便于后续修改答辩材料。预览图、构建运行时和临时导出文件不纳入 GitHub；最终 PPT 已放在 `docs/Credit_Card_Fraud_Detection_Defense.pptx`。
 
 ## 7. 外部 notebook 参考
 

@@ -1,0 +1,37 @@
+[
+  {
+    "alert_fraction": 0.01,
+    "alerts": 5686,
+    "cumulative_recall": 0.019991910381091396
+  },
+  {
+    "alert_fraction": 0.02,
+    "alerts": 11372,
+    "cumulative_recall": 0.03998382076218279
+  },
+  {
+    "alert_fraction": 0.05,
+    "alerts": 28431,
+    "cumulative_recall": 0.09994548300300722
+  },
+  {
+    "alert_fraction": 0.1,
+    "alerts": 56863,
+    "cumulative_recall": 0.19895538399310625
+  },
+  {
+    "alert_fraction": 0.2,
+    "alerts": 113726,
+    "cumulative_recall": 0.32701756854193414
+  },
+  {
+    "alert_fraction": 0.5,
+    "alerts": 284315,
+    "cumulative_recall": 0.6289784218208677
+  },
+  {
+    "alert_fraction": 1.0,
+    "alerts": 568630,
+    "cumulative_recall": 1.0
+  }
+]

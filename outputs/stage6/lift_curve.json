@@ -1,0 +1,75 @@
+{
+  "buckets": [
+    {
+      "bucket": 1,
+      "samples": 56863,
+      "positives": 56566,
+      "positive_rate": 0.9947769199655312,
+      "lift": 1.9895538399310624
+    },
+    {
+      "bucket": 2,
+      "samples": 56863,
+      "positives": 36410,
+      "positive_rate": 0.6403109227441395,
+      "lift": 1.280621845488279
+    },
+    {
+      "bucket": 3,
+      "samples": 56863,
+      "positives": 28643,
+      "positive_rate": 0.5037194660851521,
+      "lift": 1.0074389321703041
+    },
+    {
+      "bucket": 4,
+      "samples": 56863,
+      "positives": 28544,
+      "positive_rate": 0.5019784394069957,
+      "lift": 1.0039568788139914
+    },
+    {
+      "bucket": 5,
+      "samples": 56863,
+      "positives": 28665,
+      "positive_rate": 0.5041063609025201,
+      "lift": 1.0082127218050403
+    },
+    {
+      "bucket": 6,
+      "samples": 56863,
+      "positives": 28554,
+      "positive_rate": 0.5021543006876176,
+      "lift": 1.0043086013752351
+    },
+    {
+      "bucket": 7,
+      "samples": 56863,
+      "positives": 28302,
+      "positive_rate": 0.4977225964159471,
+      "lift": 0.9954451928318943
+    },
+    {
+      "bucket": 8,
+      "samples": 56863,
+      "positives": 25904,
+      "positive_rate": 0.4555510613228286,
+      "lift": 0.9111021226456572
+    },
+    {
+      "bucket": 9,
+      "samples": 56863,
+      "positives": 17789,
+      "positive_rate": 0.3128396320982009,
+      "lift": 0.6256792641964019
+    },
+    {
+      "bucket": 10,
+      "samples": 56863,
+      "positives": 4938,
+      "positive_rate": 0.0868403003710673,
+      "lift": 0.1736806007421346
+    }
+  ],
+  "baseline_rate": 0.5
+}

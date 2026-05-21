@@ -35,6 +35,9 @@ STAGES: dict[str, list[str]] = {
     "5": [
         "s05_oof_validation.py",
     ],
+    "6": [
+        "s06_cascade_architecture.py",
+    ],
 }
 
 STAGE_DESCRIPTIONS = {
@@ -43,6 +46,7 @@ STAGE_DESCRIPTIONS = {
     "3": "Deep Evaluation Analysis",
     "4": "Extended Analysis (Notebook-Inspired)",
     "5": "OOF Threshold Review",
+    "6": "Two-Stage Cascade & Advanced Metrics",
 }
 
 
@@ -85,8 +89,8 @@ def main() -> None:
     parser.add_argument(
         "--stage",
         type=str,
-        choices=["1", "2", "3", "4", "5"],
-        help="Run a single stage only (1-5). Omit to run all stages.",
+        choices=["1", "2", "3", "4", "5", "6"],
+        help="Run a single stage only (1-6). Omit to run all stages.",
     )
     parser.add_argument(
         "--quick",
@@ -97,7 +101,7 @@ def main() -> None:
         "--skip-stage",
         type=str,
         nargs="*",
-        choices=["1", "2", "3", "4", "5"],
+        choices=["1", "2", "3", "4", "5", "6"],
         help="Skip specified stages.",
     )
     args = parser.parse_args()
@@ -109,7 +113,7 @@ def main() -> None:
     if args.stage:
         stage_ids = [args.stage]
     else:
-        stage_ids = ["1", "2", "3", "4", "5"]
+        stage_ids = ["1", "2", "3", "4", "5", "6"]
 
     if args.skip_stage:
         stage_ids = [s for s in stage_ids if s not in args.skip_stage]

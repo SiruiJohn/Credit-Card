@@ -1,6 +1,6 @@
 # Project Status and Fix Log
 
-Updated on 2026-05-15.
+Updated on 2026-05-22.
 
 ## Fixed Breakpoints
 
@@ -84,6 +84,29 @@ To verify the strong MinMax result from Stage 4 under a stricter protocol, `scri
 
 Key output: `outputs/stage5/oof_minmax_summary.md`.
 
+## Stage 6 Cascade Architecture and Advanced Metrics
+
+Stage 6 was added after the OOF review to turn the two validated LR operating modes into a business-facing cascade:
+
+- Stage 1: MinMax LR at threshold 0.41 for high-confidence auto-blocking.
+- Stage 2: Standard LR at threshold 0.85 as a recall safety net for remaining transactions.
+- Advanced metrics added in `scripts/utils.py`: F-beta, Lift, Cumulative Gain, Amount-Weighted metrics, Expected Calibration Error, and PSI.
+- Stage 6 script: `scripts/s06_cascade_architecture.py`.
+- Key output: `outputs/stage6/cascade_summary.md`.
+
+Current Stage 6 external result:
+
+| Metric | Single Standard LR | Two-Stage Cascade |
+|---|---:|---:|
+| Precision | 0.5894 | 0.6025 |
+| Recall | 0.8466 | 0.8942 |
+| F1 | 0.6949 | 0.7200 |
+| F-beta=2 | 0.7786 | 0.8153 |
+
+Follow-up fix on 2026-05-22:
+
+- Corrected cascade amount-weighted metrics to use the final cascade prediction mask instead of reusing the single standard-LR threshold.
+
 ### 4. Defense deck added
 
 Fix:
@@ -155,6 +178,6 @@ Note: kNN external evaluation is on a stratified subset for runtime feasibility.
 
 ## Remaining Work
 
-- Convert useful EDA ideas from the two external notebooks into project-native figures.
-- Add mature library models such as CatBoost/LightGBM/XGBoost only as non-core upper-bound references, not as the main course-required models.
 - If submission requires a fully clean package, remove generated caches and temporary marker files after final verification.
+- If more model depth is needed, add CatBoost/LightGBM/XGBoost only as non-core upper-bound references.
+- For a stronger final report, summarize Stage 6 cascade results in the integrated report and defense deck.
